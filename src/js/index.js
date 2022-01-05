@@ -15,7 +15,7 @@ export default class App {
 		this.particles = [];
 		this.circles = [];
 		this.fireworksMax = 10;
-		this.fireworksChance = 1;
+		this.fireworksChance = 0.5;
 		this.hue = 0;
 
 		this.scrollAnim = new ScrollAnim();
@@ -25,7 +25,9 @@ export default class App {
 		gsap.registerPlugin(ScrollToPlugin);
 
 		this.scrollAnim.init();
-		this.bounceNumber();
+		setTimeout(() => {
+			this.bounceNumber();
+		}, 1000);
 	}
 
 	splitText($txt) {
@@ -65,7 +67,7 @@ export default class App {
 		});
 
 		tl.to(question, {
-			delay: 0.4,
+			delay: 0.2,
 			duration: 0.2,
 			opacity: 1,
 			scale: 1.4,
