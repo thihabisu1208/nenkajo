@@ -15,7 +15,7 @@ export default class App {
 		this.particles = [];
 		this.circles = [];
 		this.fireworksMax = 10;
-		this.fireworksChance = 0.2;
+		this.fireworksChance = 1;
 		this.hue = 0;
 
 		this.scrollAnim = new ScrollAnim();
@@ -131,7 +131,7 @@ export default class App {
 			gsap.to(window, {
 				duration: 2,
 				delay: 1,
-				scrollTo: ".works",
+				scrollTo: ".target",
 				ease: "power2.inOut",
 			});
 		});
